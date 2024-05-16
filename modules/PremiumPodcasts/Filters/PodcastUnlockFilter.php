@@ -41,7 +41,7 @@ class PodcastUnlockFilter implements FilterInterface
         }
 
         // Make sure this isn't already a premium podcast route
-        if (url_is((string) base_url(route_to('premium-podcast-unlock', $routerParams[0])))) {
+        if (url_is(base_url(route_to('premium-podcast-unlock', $routerParams[0])))) {
             return;
         }
 
@@ -62,7 +62,7 @@ class PodcastUnlockFilter implements FilterInterface
         }
 
         // Episode should be embeddable even if it is premium
-        if (url_is((string) base_url(route_to('embed', $episode->podcast->handle, $episode->slug)))) {
+        if (url_is(base_url(route_to('embed', $episode->podcast->handle, $episode->slug)))) {
             return;
         }
 
