@@ -10,18 +10,18 @@ declare(strict_types=1);
 
 return [
     'podcast_contributors' => 'Collaboratori del podcast',
-    'view' => "{username}'s contribution to {podcastTitle}",
+    'view' => "Contributo di {username} a {podcastTitle}",
     'add' => 'Aggiungi collaboratore',
-    'add_contributor' => 'Add a contributor for {0}',
-    'edit_role' => 'Update role for {0}',
+    'add_contributor' => 'Aggiungi un collaboratore per {0}',
+    'edit_role' => 'Aggiorna ruolo per {0}',
     'edit' => 'Modifica',
     'remove' => 'Rimuovi',
     'list' => [
         'username' => 'Nome Utente',
-        'role' => 'Role',
+        'role' => 'Ruolo',
     ],
     'form' => [
-        'user' => 'User',
+        'user' => 'Utente',
         'user_placeholder' => 'Seleziona un utente…',
         'role' => 'Ruolo',
         'role_placeholder' => 'Seleziona il suo ruolo…',
@@ -29,15 +29,15 @@ return [
         'submit_edit' => 'Aggiorna Ruolo',
     ],
     'delete_form' => [
-        'title' => 'Remove {contributor}',
+        'title' => 'Rimuovi {contributor}',
         'disclaimer' =>
-            'You are about to remove {contributor} from contributors. They will not be able to access "{podcastTitle}" anymore.',
-        'understand' => 'I understand, I want to remove {contributor} from "{podcastTitle}"',
-        'submit' => 'Remove',
+            'Stai per rimuovere {contributor} dai collaboratori. Non potrà più accedere a "{podcastTitle}".',
+        'understand' => 'Capisco, voglio rimuovere {contributor} da "{podcastTitle}"',
+        'submit' => 'Rimuovi',
     ],
     'messages' => [
-        'editSuccess' => 'Role successfully changed!',
-        'editOwnerError' => "You can't edit the podcast owner!",
+        'editSuccess' => 'Ruolo modificato con successo!',
+        'editOwnerError' => "Non puoi modificare il proprietario del podcast!",
         'removeOwnerError' => "Non puoi rimuovere il proprietario del podcast!",
         'removeSuccess' =>
             'Hai rimosso con successo {username} da {podcastTitle}',

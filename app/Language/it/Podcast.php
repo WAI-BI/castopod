@@ -11,19 +11,19 @@ declare(strict_types=1);
 return [
     'feed' => 'Feed RSS del podcast',
     'season' => 'Stagione {seasonNumber}',
-    'list_of_episodes_year' => '{year} episodi ({episodeCount})',
+    'list_of_episodes_year' => 'Episodi del {year} ({episodeCount})',
     'list_of_episodes_season' =>
-        'Stagione {seasonNumber} episodi ({episodeCount})',
+        'Episodi della stagione {seasonNumber} ({episodeCount})',
     'no_episode' => 'Nessun episodio trovato!',
     'follow' => 'Segui',
-    'followTitle' => 'Segui {actorDisplayName} sul fediverso!',
+    'followTitle' => 'Segui {actorDisplayName} nel fediverso!',
     'followers' => '{numberOfFollowers, plural,
         one {# follower}
-        other {# followers}
+        other {# follower}
     }',
     'posts' => '{numberOfPosts, plural,
         one {# post}
-        other {# posts}
+        other {# post}
     }',
     'links' => 'Link',
     'activity' => 'Attività',
@@ -31,14 +31,14 @@ return [
     'episodes_title' => 'Episodi di {podcastTitle}',
     'about' => 'Informazioni',
     'stats' => [
-        'title' => 'Stats',
+        'title' => 'Statistiche',
         'number_of_seasons' => '{0, plural,
-            one {# season}
-            other {# seasons}
+            one {# stagione}
+            other {# stagioni}
         }',
         'number_of_episodes' => '{0, plural,
-            one {# episode}
-            other {# episodes}
+            one {# episodio}
+            other {# episodi}
         }',
         'first_published_at' => 'Primo episodio pubblicato il {0, date, medium}',
     ],
@@ -47,8 +47,8 @@ return [
     'find_on' => 'Trova {podcastTitle} su',
     'listen_on' => 'Ascolta su',
     'persons' => '{personsCount, plural,
-        one {# person}
-        other {# persons}
+        one {# persona}
+        other {# persone}
     }',
     'persons_list' => 'Persone',
     'castopod_website' => 'Castopod (sito web)',

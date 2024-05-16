@@ -9,7 +9,7 @@ declare(strict_types=1);
  */
 
 return [
-    'title' => "Commento di {actorDisplayName} su {episodeTitle}",
+    'title' => "Commento di {actorDisplayName} per {episodeTitle}",
     'back_to_comments' => 'Torna ai commenti',
     'form' => [
         'episode_message_placeholder' => 'Scrivi un commento…',
@@ -18,17 +18,17 @@ return [
         'submit_reply' => 'Rispondi',
     ],
     'likes' => '{numberOfLikes, plural,
-        one {# like}
-        other {# likes}
+        one {# mi piace}
+        other {# mi piace}
     }',
     'replies' => '{numberOfReplies, plural,
-        one {# like}
-        other {# likes}
+        one {# risposta}
+        other {# risposte}
     }',
     'like' => 'Mi piace',
     'reply' => 'Rispondi',
-    'view_replies' => 'Visualizza ({numberOfReplies}) risposte',
+    'view_replies' => 'Visualizza risposte ({numberOfReplies})',
     'block_actor' => 'Blocca utente @{actorUsername}',
     'block_domain' => 'Blocca dominio @{actorDomain}',
-    'delete' => 'Cancella commento',
+    'delete' => 'Elimina commento',
 ];

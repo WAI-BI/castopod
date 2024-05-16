@@ -9,25 +9,25 @@ declare(strict_types=1);
  */
 
 return [
-    'your_handle' => 'Your handle',
-    'your_handle_hint' => 'Inserisci @username@domain da cui vuoi interagire.',
+    'your_handle' => 'Il tuo handle',
+    'your_handle_hint' => 'Inserisci il @username@dominio da cui vuoi agire.',
     'follow' => [
         'label' => 'Segui',
         'title' => 'Segui {actorDisplayName}',
         'subtitle' => 'Stai per seguire:',
-        'accountNotFound' => 'Impossibile trovare l\'account.',
-        'remoteFollowNotAllowed' => 'Sembra che il server del account non permetta il segui da remoto…',
+        'accountNotFound' => 'Account non trovato.',
+        'remoteFollowNotAllowed' => 'Sembra che il server dell\'account non permetta i follow remoti…',
         'submit' => 'Procedi a seguire',
     ],
     'favourite' => [
-        'title' => "Post preferito di {actorDisplayName}",
+        'title' => "Aggiungi ai preferiti il post di {actorDisplayName}",
         'subtitle' => 'Stai per aggiungere ai preferiti:',
         'submit' => 'Procedi ad aggiungere ai preferiti',
     ],
     'reblog' => [
         'title' => "Condividi il post di {actorDisplayName}",
         'subtitle' => 'Stai per condividere:',
-        'submit' => 'Procedere alla condivisione',
+        'submit' => 'Procedi a condividere',
     ],
     'reply' => [
         'title' => "Rispondi al post di {actorDisplayName}",

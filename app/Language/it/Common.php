@@ -9,22 +9,22 @@ declare(strict_types=1);
  */
 
 return [
-    'yes' => 'Si',
+    'yes' => 'Sì',
     'no' => 'No',
     'cancel' => 'Annulla',
-    'optional' => 'Facoltativo',
+    'optional' => 'Opzionale',
     'close' => 'Chiudi',
     'home' => 'Home',
     'explicit' => 'Esplicito',
-    'powered_by' => 'Powered by {castopod}',
+    'powered_by' => 'Offerto da {castopod}',
     'go_back' => 'Torna indietro',
     'play_episode_button' => [
         'play' => 'Riproduci',
         'playing' => 'In riproduzione',
     ],
-    'read_more' => 'Continua a leggere',
-    'read_less' => 'Leggere meno',
-    'see_more' => 'Mostra altro',
-    'see_less' => 'Mostra meno',
+    'read_more' => 'Leggi di più',
+    'read_less' => 'Leggi di meno',
+    'see_more' => 'Vedi di più',
+    'see_less' => 'Vedi di meno',
     'legal_notice' => 'Note legali',
 ];

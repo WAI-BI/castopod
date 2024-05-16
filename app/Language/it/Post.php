@@ -16,7 +16,7 @@ return [
     'form' => [
         'message_placeholder' => 'Scrivi un messaggio…',
         'episode_message_placeholder' => 'Scrivi un messaggio per l\'episodio…',
-        'episode_url_placeholder' => 'Url dell\'episodio',
+        'episode_url_placeholder' => 'URL dell\'episodio',
         'reply_to_placeholder' => 'Rispondi a @{actorUsername}',
         'submit' => 'Invia',
         'submit_reply' => 'Rispondi',
@@ -36,5 +36,5 @@ return [
     'expand' => 'Espandi post',
     'block_actor' => 'Blocca utente @{actorUsername}',
     'block_domain' => 'Blocca dominio @{actorDomain}',
-    'delete' => 'Cancella post',
+    'delete' => 'Elimina post',
 ];
