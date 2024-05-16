@@ -12,6 +12,6 @@ return [
     'back_to_home' => 'Torna alla home',
     'map' => [
         'title' => 'Mappa',
-        'description' => 'Scopri gli episodi di podcast su {siteName} che si trovano su una mappa! Viaggia attraverso la mappa e ascolta episodi che parlano di luoghi specifici.',
+        'description' => 'Scopri gli episodi di podcast su {siteName} posizionati su una mappa! Viaggia attraverso la mappa e ascolta episodi che parlano di luoghi specifici.',
     ],
 ];

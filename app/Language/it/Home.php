@@ -12,9 +12,9 @@ return [
     'all_podcasts' => 'Tutti i podcast',
     'sort_by' => 'Ordina per',
     'sort_options' => [
-        'activity' => 'Attività recenti',
-        'created_desc' => 'Più recente prima',
-        'created_asc' => 'Più vecchio prima',
+        'activity' => 'Attività recente',
+        'created_desc' => 'Più nuovi prima',
+        'created_asc' => 'Più vecchi prima',
     ],
     'no_podcast' => 'Nessun podcast trovato',
 ];

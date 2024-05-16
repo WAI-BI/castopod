@@ -9,10 +9,10 @@ declare(strict_types=1);
  */
 
 return [
-    'info' => 'My account info',
-    'changePassword' => 'Change my password',
+    'info' => 'Le mie informazioni account',
+    'changePassword' => 'Cambia la mia password',
     'messages' => [
-        'wrongPasswordError' => "You've entered the wrong password, try again.",
-        'passwordChangeSuccess' => 'Password has been successfully changed!',
+        'wrongPasswordError' => "Hai inserito la password sbagliata, prova di nuovo.",
+        'passwordChangeSuccess' => 'La password è stata cambiata con successo!',
     ],
 ];

@@ -16,35 +16,35 @@ return [
     'season_episode' => 'Stagione {seasonNumber} episodio {episodeNumber}',
     'season_episode_abbr' => 'S{seasonNumber}:E{episodeNumber}',
     'persons' => '{personsCount, plural,
-        one {# person}
-        other {# persons}
+        one {# persona}
+        other {# persone}
     }',
     'persons_list' => 'Persone',
     'back_to_episodes' => 'Torna agli episodi di {podcast}',
     'comments' => 'Commenti',
     'activity' => 'Attività',
-    'chapters' => 'Chapters',
-    'transcript' => 'Transcript',
-    'description' => 'Descrizione dell\'episodio',
+    'chapters' => 'Capitoli',
+    'transcript' => 'Trascrizione',
+    'description' => 'Descrizione episodio',
     'number_of_comments' => '{numberOfComments, plural,
-        one {# comment}
-        other {# comments}
+        one {# commento}
+        other {# commenti}
     }',
     'all_podcast_episodes' => 'Tutti gli episodi del podcast',
-    'back_to_podcast' => 'Torna a podcast',
+    'back_to_podcast' => 'Torna al podcast',
     'preview' => [
         'title' => 'Anteprima',
         'not_published' => 'Non pubblicato',
         'text' => '{publication_status, select,
             published {Questo episodio non è ancora stato pubblicato.}
-            scheduled {Questo episodio sarà pubblicato il {publication_date}.}
-            with_podcast {Questo episodio sarà pubblicato in contemporanea al podcast.}
+            scheduled {Questo episodio è programmato per la pubblicazione il {publication_date}.}
+            with_podcast {Questo episodio sarà pubblicato contemporaneamente al podcast.}
             other {Questo episodio non è ancora stato pubblicato.}
         }',
         'publish' => 'Pubblica',
         'publish_edit' => 'Modifica pubblicazione',
     ],
-    'no_chapters' => 'No chapters are available for this episode.',
-    'download_transcript' => 'Download transcript ({extension})',
-    'no_transcript' => 'No transcript available for this episode.',
+    'no_chapters' => 'Nessun capitolo disponibile per questo episodio.',
+    'download_transcript' => 'Scarica trascrizione ({extension})',
+    'no_transcript' => 'Nessuna trascrizione disponibile per questo episodio.',
 ];

@@ -9,52 +9,52 @@ declare(strict_types=1);
  */
 
 return [
-    'edit_role' => "Edit {username}'s role",
-    'ban' => 'Ban',
-    'unban' => 'Unban',
-    'delete' => 'Delete',
-    'create' => 'New user',
-    'view' => "{username}'s info",
-    'all_users' => 'All users',
+    'edit_role' => "Modifica ruolo di {username}",
+    'ban' => 'Banna',
+    'unban' => 'Revoca il ban',
+    'delete' => 'Elimina',
+    'create' => 'Nuovo utente',
+    'view' => "Informazioni di {username}",
+    'all_users' => 'Tutti gli utenti',
     'list' => [
-        'user' => 'User',
-        'role' => 'Role',
-        'banned' => 'Banned?',
+        'user' => 'Utente',
+        'role' => 'Ruolo',
+        'banned' => 'Bannato?',
     ],
     'form' => [
         'email' => 'Email',
-        'username' => 'Username',
+        'username' => 'Nome utente',
         'password' => 'Password',
-        'new_password' => 'New Password',
-        'role' => 'Role',
-        'roles' => 'Roles',
-        'permissions' => 'Permissions',
-        'submit_create' => 'Create user',
-        'submit_edit' => 'Save',
-        'submit_password_change' => 'Change!',
+        'new_password' => 'Nuova Password',
+        'role' => 'Ruolo',
+        'roles' => 'Ruoli',
+        'permissions' => 'Permessi',
+        'submit_create' => 'Crea utente',
+        'submit_edit' => 'Salva',
+        'submit_password_change' => 'Cambia!',
     ],
     'delete_form' => [
-        'title' => 'Delete {user}',
+        'title' => 'Elimina {user}',
         'disclaimer' =>
-            "You are about to delete {user} permanently. They will not be able to access the admin area anymore.",
-        'understand' => 'I understand, I want to delete {user} permanently',
-        'submit' => 'Delete',
+            "Stai per eliminare {user} definitivamente. Non potrà più accedere all'area amministrativa.",
+        'understand' => 'Ho capito, voglio eliminare {user} definitivamente',
+        'submit' => 'Elimina',
     ],
     'messages' => [
         'createSuccess' =>
-            'User created successfully! {username} will be prompted with a password reset upon first authentication.',
+            'Utente creato con successo! {username} verrà richiesto di reimpostare la password al primo accesso.',
         'roleEditSuccess' =>
-            "{username}'s roles have been successfully updated.",
-        'banSuccess' => '{username} has been banned.',
-        'unbanSuccess' => '{username} has been unbanned.',
+            "I ruoli di {username} sono stati aggiornati con successo.",
+        'banSuccess' => '{username} è stato bannato.',
+        'unbanSuccess' => '{username} è stato sbannato.',
         'editOwnerError' =>
-            '{username} is the instance owner, you cannot edit its roles.',
+            '{username} è il proprietario dell\'istanza, non è possibile modificare i suoi ruoli.',
         'banSuperAdminError' =>
-            '{username} is a superadmin, one does not simply ban a superadmin…',
+            '{username} è un superadmin, non si può semplicemente bannare un superadmin…',
         'deleteOwnerError' =>
-            '{username} is the instance owner, one does not simply delete the owner…',
+            '{username} è il proprietario dell\'istanza, non si può semplicemente eliminare il proprietario…',
         'deleteSuperAdminError' =>
-            '{username} is a superadmin, one does not simply delete a superadmin…',
-        'deleteSuccess' => '{username} has been deleted.',
+            '{username} è un superadmin, non si può semplicemente eliminare un superadmin…',
+        'deleteSuccess' => '{username} è stato eliminato.',
     ],
 ];
