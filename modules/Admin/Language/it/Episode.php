@@ -180,7 +180,6 @@ return [
         'submit' => 'Pubblica',
         'submit_edit' => 'Modifica la pubblicazione',
         'cancel_publication' => 'Annulla la pubblicazione',
-        'message_warning' => 'Non hai scritto un messaggio per il tuo post di annuncio!',
         'message_warning_hint' => 'Avere un messaggio aumenta l\'impegno sociale, garantendo una migliore visibilità per il tuo episodio.',
         'message_warning' => 'Hai scritto un messaggio…',
         'message_warning_submit' => 'Pubblica comunque',

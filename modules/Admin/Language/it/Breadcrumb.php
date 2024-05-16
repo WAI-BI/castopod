@@ -12,7 +12,7 @@ use Modules\Admin\Config\Admin;
 
 return [
     'label' => 'breadcrumb',
-    config(Admin::class)
+    config('Admin')
         ->gateway => 'Home',
     'podcasts' => 'podcast',
     'episodes' => 'episodi',
