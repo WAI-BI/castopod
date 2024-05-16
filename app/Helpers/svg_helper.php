@@ -18,7 +18,7 @@ if (! function_exists('svg')) {
      */
     function svg(string $name, ?string $class = null): string
     {
-        $svgContents = file_get_contents('assets/images/' . $name . '.svg');
+        $svgContents = file_get_contents(base_url('public/assets/images/' . $name . '.svg'));
         if ($class) {
             return str_replace('<svg', '<svg class="' . $class . '"', $svgContents);
         }

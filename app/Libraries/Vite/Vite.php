@@ -29,7 +29,7 @@ class Vite
 
     private function loadDev(string $path, string $type): string
     {
-        return $this->getHtmlTag(config('Vite') ->baseUrl . config('Vite')->assetsRoot . "/{$path}", $type);
+        return $this->getHtmlTag(config('Vite')->baseUrl . config('Vite')->assetsRoot . "/{$path}", $type);
     }
 
     private function loadProd(string $path, string $type): string
@@ -38,8 +38,7 @@ class Vite
             $cacheName = 'vite-manifest';
             if (! ($cachedManifest = cache($cacheName))) {
                 $manifestPath = config('Vite')
-                    ->assetsRoot . '/' . config('Vite')
-                    ->manifestFile;
+                    ->baseUrl . '/' . config('Vite')->assetsRoot . '/' . config('Vite')->manifestFile;
                 try {
                     if (($manifestContents = file_get_contents($manifestPath)) !== false) {
                         $cachedManifest = json_decode($manifestContents, true);
@@ -62,7 +61,11 @@ class Vite
             // import css dependencies if any
             if (array_key_exists('css', $manifestElement)) {
                 foreach ($manifestElement['css'] as $cssFile) {
-                    $html .= $this->getHtmlTag('/' . config('Vite')->assetsRoot . '/' . $cssFile, 'css');
+                    $html .= $this->getHtmlTag(
+                        config('Vite')
+                            ->baseUrl . '/' . config('Vite')->assetsRoot . '/' . $cssFile,
+                        'css'
+                    );
                 }
             }
 
@@ -74,21 +77,29 @@ class Vite
                         if (array_key_exists('css', $this->manifestData[$importPath])) {
                             foreach ($this->manifestData[$importPath]['css'] as $cssFile) {
                                 $html .= $this->getHtmlTag(
-                                    '/' . config('Vite')->assetsRoot . '/' . $cssFile,
+                                    config('Vite')
+                                        ->baseUrl . '/' . config('Vite')->assetsRoot . '/' . $cssFile,
                                     'css'
                                 );
                             }
                         }
 
                         $html .= $this->getHtmlTag(
-                            '/' . config('Vite')->assetsRoot . '/' . $this->manifestData[$importPath]['file'],
+                            config('Vite')
+                                ->baseUrl . '/' . config(
+                                    'Vite'
+                                )->assetsRoot . '/' . $this->manifestData[$importPath]['file'],
                             'js'
                         );
                     }
                 }
             }
 
-            $html .= $this->getHtmlTag('/' . config('Vite')->assetsRoot . '/' . $manifestElement['file'], $type);
+            $html .= $this->getHtmlTag(
+                config('Vite')
+                    ->baseUrl . '/' . config('Vite')->assetsRoot . '/' . $manifestElement['file'],
+                $type
+            );
         }
 
         return $html;
