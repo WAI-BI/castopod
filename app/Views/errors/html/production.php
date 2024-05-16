@@ -8,7 +8,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 	<title><?= lang('Errors.whoops') ?></title>
-	<link rel='stylesheet' type='text/css' href='<?= route_to('themes-colors-css') ?>' />
+	<link rel='stylesheet' type='text/css' href='<?= base_url(route_to('themes-colors-css')) ?>' />
     <?= service('vite')->asset('styles/index.css', 'css') ?>
 	<?php if (auth()->loggedIn()): ?>
 		<?= service('vite')->asset('js/error.ts', 'js') ?>
@@ -42,7 +42,7 @@
 		<div class="w-full max-w-md mx-auto md:mx-0">
 			<h2 class="text-xl font-semibold font-display">Found a bug?</h2>
 			<p>You can help get it fixed by <a href="https://castopod.org/new-issue_bug" target="_blank" rel="noopener noreferrer" class="underline decoration-3 hover:no-underline focus:ring-accent decoration-accent">creating an issue on the Castopod issue tracker</a>. Please check that the issue does not already exist beforehand.</p>
-		</div>	
+		</div>
 		<div class="w-full max-w-md mx-auto md:mx-0">
 			<h2 class="text-xl font-semibold font-display">Not sure what's happening?</h2>
 			<p>You can ask for help in the <a href="https://castopod.org/chat" target="_blank" rel="noopener noreferrer" class="underline decoration-2 hover:no-underline focus:ring-accent decoration-accent">Castopod community chat</a>!</p>

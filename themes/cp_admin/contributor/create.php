@@ -11,7 +11,7 @@
 
 <?= $this->section('content') ?>
 
-<form method="POST" action="<?= route_to('contributor-add', $podcast->id) ?>" class="flex flex-col max-w-sm gap-y-4">
+<form method="POST" action="<?= base_url(route_to('contributor-add', $podcast->id)) ?>" class="flex flex-col max-w-sm gap-y-4">
 <?= csrf_field() ?>
 
 <Forms.Field

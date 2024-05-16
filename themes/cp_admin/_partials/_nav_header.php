@@ -7,16 +7,16 @@ $userPodcasts = get_podcasts_user_can_interact_with(auth()->user()); ?>
         data-sidebar-toggler="toggler"
         class="h-full pr-1 text-xl md:hidden focus:ring-accent focus:ring-inset" aria-label="<?= lang('Navigation.toggle_sidebar') ?>"><?= icon('menu-2-fill') ?></button>
     <div class="inline-flex items-center h-full">
-        <a href="<?= route_to(
+        <a href="<?= base_url(route_to(
             'admin',
-        ) ?>" class="inline-flex items-center h-full px-2 border-r border-navigation focus:ring-inset focus:ring-accent">
+        )) ?>" class="inline-flex items-center h-full px-2 border-r border-navigation focus:ring-inset focus:ring-accent">
             <?= (isset($podcast) ? icon('arrow-left-line', [
                         'class' => 'mr-2',
                     ]) : '') . svg('castopod-logo-base', 'h-6') ?>
         </a>
-        <a href="<?= route_to(
+        <a href="<?= base_url(route_to(
             'home',
-        ) ?>" class="inline-flex items-center h-full px-2 text-sm font-semibold sm:px-6 hover:underline focus:ring-inset focus:ring-accent" title="<?= lang('Navigation.go_to_website') ?>">
+        )) ?>" class="inline-flex items-center h-full px-2 text-sm font-semibold sm:px-6 hover:underline focus:ring-inset focus:ring-accent" title="<?= lang('Navigation.go_to_website') ?>">
                 <span class="hidden sm:block"><?= lang('Navigation.go_to_website') ?></span>
                 <?= icon('external-link-fill', [
         'class' => 'sm:ml-1 text-xl sm:text-base sm:opacity-60',
@@ -61,7 +61,7 @@ if ($userPodcasts !== []) {
                             </div>
                         HTML
             ,
-            'uri' => route_to('notification-list', $userPodcast->id),
+            'uri' => base_url(route_to('notification-list', $userPodcast->id)),
         ];
     }
 } else {
@@ -110,19 +110,19 @@ foreach ($userPodcasts as $userPodcast) {
 }
 
 $interactAsText = lang('Common.choose_interact');
-$interactAsRoute = route_to('interact-as-actor');
+$interactAsRoute = base_url(route_to('interact-as-actor'));
 $csrfField = csrf_field();
 
 $menuItems = [
     [
         'type'  => 'link',
         'title' => lang('Navigation.account.my-account'),
-        'uri'   => route_to('my-account'),
+        'uri'   => base_url(route_to('my-account')),
     ],
     [
         'type'  => 'link',
         'title' => lang('Navigation.account.change-password'),
-        'uri'   => route_to('change-password'),
+        'uri'   => base_url(route_to('change-password')),
     ],
     [
         'type' => 'separator',
@@ -130,7 +130,7 @@ $menuItems = [
     [
         'type'  => 'link',
         'title' => lang('Navigation.account.logout'),
-        'uri'   => route_to('logout'),
+        'uri'   => base_url(route_to('logout')),
     ],
 ];
 

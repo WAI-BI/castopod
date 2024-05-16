@@ -17,9 +17,9 @@ $isEpisodeArea = isset($podcast) && isset($episode);
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="icon" type="image/x-icon" href="<?= get_site_icon_url('ico') ?>" />
     <link rel="apple-touch-icon" href="<?= get_site_icon_url('180') ?>">
-    <link rel="manifest" href="<?= route_to('webmanifest') ?>">
+    <link rel="manifest" href="<?= base_url(route_to('webmanifest')) ?>">
 
-    <link rel='stylesheet' type='text/css' href='<?= route_to('themes-colors-css') ?>' />
+    <link rel='stylesheet' type='text/css' href='<?= base_url(route_to('themes-colors-css')) ?>' />
     <?= service('vite')
         ->asset('styles/index.css', 'css') ?>
     <?= service('vite')
@@ -39,7 +39,7 @@ $isEpisodeArea = isset($podcast) && isset($episode);
                     <div class="flex flex-wrap items-center truncate">
                     <?php if (($isEpisodeArea && $episode->is_premium) || ($isPodcastArea && $podcast->is_premium)): ?>
                         <div class="inline-flex items-center">
-                            <IconButton uri="<?= route_to('subscription-list', $podcast->id) ?>" glyph="exchange-dollar-fill" variant="secondary" size="large" class="p-0 mr-2 border-0"><?= ($isEpisodeArea && $episode->is_premium) ? lang('PremiumPodcasts.episode_is_premium') : lang('PremiumPodcasts.podcast_is_premium') ?></IconButton>
+                            <IconButton uri="<?= base_url(route_to('subscription-list', $podcast->id)) ?>" glyph="exchange-dollar-fill" variant="secondary" size="large" class="p-0 mr-2 border-0"><?= ($isEpisodeArea && $episode->is_premium) ? lang('PremiumPodcasts.episode_is_premium') : lang('PremiumPodcasts.podcast_is_premium') ?></IconButton>
                             <Heading tagName="h1" size="large" class="truncate"><?= $this->renderSection('pageTitle') ?></Heading>
                         </div>
                     <?php else: ?>
@@ -63,7 +63,7 @@ $isEpisodeArea = isset($podcast) && isset($episode);
                             'podcastTitle' => $podcast->title,
                         ]) ?></span>
                     </p>
-                    <a href="<?= route_to('podcast-imports', $podcast->id) ?>" class="ml-1 text-sm font-semibold underline shadow-xs text-accent-base hover:text-accent-hover hover:no-underline"><?= lang('PodcastImport.banner.cta') ?></a>
+                    <a href="<?= base_url(route_to('podcast-imports', $podcast->id)) ?>" class="ml-1 text-sm font-semibold underline shadow-xs text-accent-base hover:text-accent-hover hover:no-underline"><?= lang('PodcastImport.banner.cta') ?></a>
                 </div>
             <?php endif; ?>
             <?php if ($podcast->publication_status !== 'published'): ?>

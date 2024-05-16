@@ -128,11 +128,11 @@ if (! function_exists('get_episode_metatags')) {
         }
 
         return $metatags->__toString() . PHP_EOL . '<link rel="alternate" type="application/json+oembed" href="' . base_url(
-            route_to('episode-oembed-json', $episode->podcast->handle, $episode->slug)
+            base_url(route_to('episode-oembed-json', $episode->podcast->handle, $episode->slug))
         ) . '" title="' . esc(
             $episode->title
         ) . ' oEmbed json" />' . PHP_EOL . '<link rel="alternate" type="text/xml+oembed" href="' . base_url(
-            route_to('episode-oembed-xml', $episode->podcast->handle, $episode->slug)
+            base_url(route_to('episode-oembed-xml', $episode->podcast->handle, $episode->slug))
         ) . '" title="' . esc($episode->title) . ' oEmbed xml" />' . PHP_EOL . $schema->__toString();
     }
 }

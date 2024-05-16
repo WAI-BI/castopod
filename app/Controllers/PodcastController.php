@@ -213,7 +213,7 @@ class PodcastController extends BaseController
                 $episodesNavigation[] = [
                     'label'              => $year['year'],
                     'number_of_episodes' => $year['number_of_episodes'],
-                    'route'              => route_to('podcast-episodes', $this->podcast->handle) .
+                    'route'              => base_url(route_to('podcast-episodes', $this->podcast->handle)) .
                         '?year=' .
                         $year['year'],
                     'is_active' => $isActive,
@@ -238,7 +238,7 @@ class PodcastController extends BaseController
                         'seasonNumber' => $season['season_number'],
                     ]),
                     'number_of_episodes' => $season['number_of_episodes'],
-                    'route'              => route_to('podcast-episodes', $this->podcast->handle) .
+                    'route'              => base_url(route_to('podcast-episodes', $this->podcast->handle)) .
                         '?season=' .
                         $season['season_number'],
                     'is_active' => $isActive,

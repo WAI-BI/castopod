@@ -154,20 +154,20 @@ if (! function_exists('publication_button')) {
         switch ($publicationStatus) {
             case 'not_published':
                 $label = lang('Episode.publish');
-                $route = route_to('episode-publish', $podcastId, $episodeId);
+                $route = base_url(route_to('episode-publish', $podcastId, $episodeId));
                 $variant = 'primary';
                 $iconLeft = 'upload-cloud-fill'; // @icon('upload-cloud-fill')
                 break;
             case 'with_podcast':
             case 'scheduled':
                 $label = lang('Episode.publish_edit');
-                $route = route_to('episode-publish_edit', $podcastId, $episodeId);
+                $route = base_url(route_to('episode-publish_edit', $podcastId, $episodeId));
                 $variant = 'warning';
                 $iconLeft = 'upload-cloud-fill'; // @icon('upload-cloud-fill')
                 break;
             case 'published':
                 $label = lang('Episode.unpublish');
-                $route = route_to('episode-unpublish', $podcastId, $episodeId);
+                $route = base_url(route_to('episode-unpublish', $podcastId, $episodeId));
                 $variant = 'danger';
                 $iconLeft = 'cloud-off-fill'; // @icon('cloud-off-fill')
                 break;
@@ -199,7 +199,7 @@ if (! function_exists('publication_status_banner')) {
             case 'not_published':
                 $bannerDisclaimer = lang('Podcast.publication_status_banner.draft_mode');
                 $bannerText = lang('Podcast.publication_status_banner.not_published');
-                $linkRoute = route_to('podcast-publish', $podcastId);
+                $linkRoute = base_url(route_to('podcast-publish', $podcastId));
                 $linkLabel = lang('Podcast.publish');
                 break;
             case 'scheduled':
@@ -207,7 +207,7 @@ if (! function_exists('publication_status_banner')) {
                 $bannerText = lang('Podcast.publication_status_banner.scheduled', [
                     'publication_date' => local_datetime($publicationDate),
                 ]);
-                $linkRoute = route_to('podcast-publish_edit', $podcastId);
+                $linkRoute = base_url(route_to('podcast-publish_edit', $podcastId));
                 $linkLabel = lang('Podcast.publish_edit');
                 break;
             default:
@@ -242,12 +242,12 @@ if (! function_exists('episode_publication_status_banner')) {
     {
         switch ($episode->publication_status) {
             case 'not_published':
-                $linkRoute = route_to('episode-publish', $episode->podcast_id, $episode->id);
+                $linkRoute = base_url(route_to('episode-publish', $episode->podcast_id, $episode->id));
                 $publishLinkLabel = lang('Episode.publish');
                 break;
             case 'scheduled':
             case 'with_podcast':
-                $linkRoute = route_to('episode-publish_edit', $episode->podcast_id, $episode->id);
+                $linkRoute = base_url(route_to('episode-publish_edit', $episode->podcast_id, $episode->id));
                 $publishLinkLabel = lang('Episode.publish_edit');
                 break;
             default:
@@ -272,7 +272,7 @@ if (! function_exists('episode_publication_status_banner')) {
                 <span class="text-xs font-semibold tracking-wide uppercase">{$bannerDisclaimer}</span>
                 <span class="ml-3 text-sm">{$bannerText}</span>
             </p>
-            <div class="flex items-baseline">    
+            <div class="flex items-baseline">
                 <a href="{$episode->preview_link}" class="ml-1 text-sm font-semibold underline shadow-xs text-accent-base hover:text-accent-hover hover:no-underline">{$previewLinkLabel}</a>
                 <span class="mx-1">•</span>
                 <a href="{$linkRoute}" class="ml-1 text-sm font-semibold underline shadow-xs text-accent-base hover:text-accent-hover hover:no-underline">{$publishLinkLabel}</a>

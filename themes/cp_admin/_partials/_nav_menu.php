@@ -3,7 +3,7 @@
         $isSectionActive = false;
         $activeItem = '';
         foreach ($data['items'] as $item) {
-            if (url_is(route_to($item, $podcastId ?? null, $episodeId ?? null))) {
+            if (url_is(base_url(route_to($item, $podcastId ?? null, $episodeId ?? null)))) {
                 $activeItem = $item;
                 $isSectionActive = true;
             }
@@ -17,11 +17,11 @@
             ]) ?>
             <?= lang($langKey . '.' . $section) ?>
             <?php if (array_key_exists('count', $data)): ?>
-                <a href="<?= route_to($data['count-route'], $podcastId ?? null, $episodeId ?? null) ?>" class="px-2 ml-2 text-xs font-normal rounded-full focus:ring-accent <?= $isSectionActive ? 'bg-navigation' : 'bg-navigation-active' ?>"><?= $data['count'] ?></a>
+                <a href="<?= base_url(route_to($data['count-route'], $podcastId ?? null, $episodeId ?? null)) ?>" class="px-2 ml-2 text-xs font-normal rounded-full focus:ring-accent <?= $isSectionActive ? 'bg-navigation' : 'bg-navigation-active' ?>"><?= $data['count'] ?></a>
                 <?php endif; ?>
             </div>
             <?php if(array_key_exists('add-cta', $data)): ?>
-                <a href="<?= route_to($data['add-cta'], $podcastId ?? null, $episodeId ?? null)  ?>" class="p-2 rounded-full shadow bg-accent-base focus:ring-accent" title="<?= lang($langKey . '.' . $data['add-cta']) ?>" data-tooltip="bottom">
+                <a href="<?= base_url(route_to($data['add-cta'], $podcastId ?? null, $episodeId ?? null))  ?>" class="p-2 rounded-full shadow bg-accent-base focus:ring-accent" title="<?= lang($langKey . '.' . $data['add-cta']) ?>" data-tooltip="bottom">
                     <?= icon('add-fill') ?>
                 </a>
             <?php endif; ?>
@@ -40,10 +40,10 @@
                 }
                 ?>
             <li class="inline-flex">
-                <?php if ($isAllowed): ?> 
+                <?php if ($isAllowed): ?>
                     <a class="relative w-full py-3 pl-14 pr-2 text-sm hover:opacity-100 before:content-chevronRightIcon before:absolute before:-ml-5 before:opacity-0 before:w-5 before:h-5 hover:bg-navigation-active focus:ring-inset focus:ring-accent<?= $isActive
                         ? ' before:opacity-100 font-semibold inline-flex items-center'
-                        : ' hover:before:opacity-60 focus:before:opacity-60' ?>" href="<?= route_to($item, $podcastId ?? null, $episodeId ?? null) ?>"><?= lang(
+                        : ' hover:before:opacity-60 focus:before:opacity-60' ?>" href="<?= base_url(route_to($item, $podcastId ?? null, $episodeId ?? null)) ?>"><?= lang(
                             $langKey . '.' . $item,
                         ) ?></a>
                 <?php else: ?>

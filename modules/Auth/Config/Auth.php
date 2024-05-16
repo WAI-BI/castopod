@@ -169,6 +169,6 @@ class Auth extends ShieldAuth
         }
 
         // prompt user to change their password
-        return $this->getUrl(route_to('magic-link-set-password'));
+        return $this->getUrl(base_url(route_to('magic-link-set-password')));
     }
 }

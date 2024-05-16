@@ -19,19 +19,19 @@ if (! function_exists('render_page_links')) {
     function render_page_links(string $class = null, string $podcastHandle = null): string
     {
         $pages = (new PageModel())->findAll();
-        $links = anchor(route_to('home'), lang('Common.home'), [
+        $links = anchor(base_url(route_to('home')), lang('Common.home'), [
             'class' => 'px-2 py-1 underline hover:no-underline focus:ring-accent',
         ]);
         if ($podcastHandle !== null) {
-            $links .= anchor(route_to('podcast-links', $podcastHandle), lang('Podcast.links'), [
+            $links .= anchor(base_url(route_to('podcast-links', $podcastHandle)), lang('Podcast.links'), [
                 'class' => 'px-2 py-1 underline hover:no-underline focus:ring-accent',
             ]);
         }
 
-        $links .= anchor(route_to('credits'), lang('Person.credits'), [
+        $links .= anchor(base_url(route_to('credits')), lang('Person.credits'), [
             'class' => 'px-2 py-1 underline hover:no-underline focus:ring-accent',
         ]);
-        $links .= anchor(route_to('map'), lang('Page.map.title'), [
+        $links .= anchor(base_url(route_to('map')), lang('Page.map.title'), [
             'class' => 'px-2 py-1 underline hover:no-underline focus:ring-accent',
         ]);
         foreach ($pages as $page) {

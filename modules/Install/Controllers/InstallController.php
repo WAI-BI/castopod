@@ -321,7 +321,7 @@ class InstallController extends Controller
         // Success!
         // set redirect_url session as admin area to go to after login
         session()
-            ->set('redirect_url', route_to('admin'));
+            ->set('redirect_url', base_url(route_to('admin')));
 
         return redirect()
             ->route('admin')

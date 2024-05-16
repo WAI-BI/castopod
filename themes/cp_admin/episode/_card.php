@@ -24,12 +24,12 @@
         [
             'type'  => 'link',
             'title' => lang('Episode.go_to_page'),
-            'uri'   => route_to('episode', esc($episode->podcast->handle), esc($episode->slug)),
+            'uri'   => base_url(route_to('episode', esc($episode->podcast->handle), esc($episode->slug))),
         ],
         [
             'type'  => 'link',
             'title' => lang('Episode.edit'),
-            'uri'   => route_to('episode-edit', $episode->podcast->id, $episode->id),
+            'uri'   => base_url(route_to('episode-edit', $episode->podcast->id, $episode->id)),
         ],
         [
             'type'  => 'link',

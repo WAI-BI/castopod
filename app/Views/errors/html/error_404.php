@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     <title><?= lang('Errors.pageNotFound') ?></title>
-    <link rel='stylesheet' type='text/css' href='<?= route_to('themes-colors-css') ?>' />
+    <link rel='stylesheet' type='text/css' href='<?= base_url(route_to('themes-colors-css')) ?>' />
     <?= service('vite')->asset('styles/index.css', 'css') ?>
 </head>
 

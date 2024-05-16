@@ -26,7 +26,7 @@ $episodeNavigation = [
     ],
 ]; ?>
 
-<a href="<?= route_to('podcast-view', $podcast->id) ?>" class="flex items-center px-4 py-2 focus:ring-inset focus:ring-accent">
+<a href="<?= base_url(route_to('podcast-view', $podcast->id)) ?>" class="flex items-center px-4 py-2 focus:ring-inset focus:ring-accent">
     <?= icon('arrow-left-line', [
         'class' => 'mr-2',
     ]) ?>
