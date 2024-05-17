@@ -1,23 +1,23 @@
 @layer base {
   :root {
-    --color-accent-base: 174 100% 29%;
-    --color-accent-hover: 172 100% 17%;
-    --color-accent-muted: 131 100% 12%;
-    --color-accent-contrast: 0 0% 100%;
-    --color-heading-foreground: 172 100% 17%;
-    --color-heading-background: 111 64% 94%;
-    --color-background-elevated: 0 0% 100%;
-    --color-background-base: 173 44% 96%;
-    --color-background-navigation: 172 100% 17%;
-    --color-background-navigation-active: 131 100% 12%;
-    --color-background-header: 172 100% 17%;
-    --color-background-highlight: 111 64% 94%;
-    --color-background-backdrop: 0 0% 50%;
-    --color-border-subtle: 111 42% 86%;
-    --color-border-contrast: 0 0% 0%;
-    --color-border-navigation: 131 100% 12%;
-    --color-text-base: 158 8% 3%;
-    --color-text-muted: 172 8% 38%;
+    --color-accent-base: 345 79% 51%; /* Rosso di partenza */
+    --color-accent-hover: 345 79% 41%; /* Più scuro per hover */
+    --color-accent-muted: 345 79% 31%; /* Più scuro per muted */
+    --color-accent-contrast: 0 0% 100%; /* Bianco */
+    --color-heading-foreground: 345 79% 41%; /* Più scuro per heading */
+    --color-heading-background: 345 79% 96%; /* Più chiaro per background heading */
+    --color-background-elevated: 0 0% 100%; /* Bianco */
+    --color-background-base: 345 44% 96%; /* Sfondo base chiaro */
+    --color-background-navigation: 345 79% 41%; /* Sfondo navigazione scuro */
+    --color-background-navigation-active: 345 79% 31%; /* Sfondo navigazione attivo */
+    --color-background-header: 345 79% 41%; /* Sfondo header */
+    --color-background-highlight: 345 79% 94%; /* Sfondo highlight */
+    --color-background-backdrop: 0 0% 50%; /* Grigio per backdrop */
+    --color-border-subtle: 345 42% 86%; /* Bordo sottile */
+    --color-border-contrast: 0 0% 0%; /* Nero per contrasto */
+    --color-border-navigation: 345 79% 31%; /* Bordo navigazione scuro */
+    --color-text-base: 345 8% 3%; /* Testo base scuro */
+    --color-text-muted: 345 8% 38%; /* Testo attenuato */
   }
 
   body {
