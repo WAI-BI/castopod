@@ -14,27 +14,27 @@ class Colors extends BaseConfig
     public array $themes = [
         /* Castopod's brand color */
         'pine' => [
-            'accent-base'     => [174, 100, 29],
-            'accent-hover'    => [172, 100, 17],
-            'accent-muted'    => [131, 100, 12],
+            'accent-base'     => [345, 79, 51],
+            'accent-hover'    => [345, 79, 41],
+            'accent-muted'    => [345, 79, 31],
             'accent-contrast' => [0, 0, 100],
 
-            'heading-foreground' => [172, 100, 17],
-            'heading-background' => [111, 64, 94],
+            'heading-foreground' => [345, 79, 41],
+            'heading-background' => [345, 79, 96],
 
             'background-elevated'   => [0, 0, 100],
-            'background-base'       => [173, 44, 96],
-            'background-navigation' => [172, 100, 17],
-            'background-header'     => [172, 100, 17],
-            'background-highlight'  => [111, 64, 94],
+            'background-base'       => [345, 44, 96],
+            'background-navigation' => [345, 79, 41],
+            'background-header'     => [345, 79, 41],
+            'background-highlight'  => [345, 79, 94],
             'background-backdrop'   => [0, 0, 50],
 
-            'border-subtle'     => [111, 42, 86],
+            'border-subtle'     => [345, 42, 86],
             'border-contrast'   => [0, 0, 0],
-            'border-navigation' => [131, 100, 12],
+            'border-navigation' => [345, 79, 31],
 
-            'text-base'  => [158, 8, 3],
-            'text-muted' => [172, 8, 38],
+            'text-base'  => [345, 8, 3],
+            'text-muted' => [345, 8, 38],
         ],
         /* Red / Rose color */
         'crimson' => [
