@@ -49,28 +49,28 @@
                 $podcasts,
             ) ?>)</Heading>
             <button class="inline-flex items-center px-2 py-1 text-sm font-semibold focus:ring-accent" id="sortby-dropdown" data-dropdown="button" data-dropdown-target="sortby-dropdown-menu" aria-haspopup="true" aria-expanded="false"><?= icon('material-symbols:sort', [
-                'class' => 'mr-1 text-xl opacity-50',
-            ]) . lang('Home.sort_by') ?></button>
+                    'class' => 'mr-1 text-xl opacity-50',
+                ]) . lang('Home.sort_by') ?></button>
             <DropdownMenu id="sortby-dropdown-menu" labelledby="sortby-dropdown" items="<?= esc(json_encode([
-                [
-                    'type'  => 'link',
-                    'title' => ($sortBy === 'activity' ? '✓ ' : '') . lang('Home.sort_options.activity'),
-                    'uri'   => route_to('home') . '?sort=activity',
-                    'class' => $sortBy === 'activity' ? 'font-semibold' : '',
-                ],
-                [
-                    'type'  => 'link',
-                    'title' => ($sortBy === 'created_desc' ? '✓ ' : '') . lang('Home.sort_options.created_desc'),
-                    'uri'   => route_to('home') . '?sort=created_desc',
-                    'class' => $sortBy === 'created_desc' ? 'font-semibold' : '',
-                ],
-                [
-                    'type'  => 'link',
-                    'title' => ($sortBy === 'created_asc' ? '✓ ' : '') . lang('Home.sort_options.created_asc'),
-                    'uri'   => route_to('home') . '?sort=created_asc',
-                    'class' => $sortBy === 'created_asc' ? 'font-semibold' : '',
-                ],
-            ])) ?>" />
+                    [
+                        'type'  => 'link',
+                        'title' => ($sortBy === 'activity' ? '✓ ' : '') . lang('Home.sort_options.activity'),
+                        'uri'   => route_to('home') . '?sort=activity',
+                        'class' => $sortBy === 'activity' ? 'font-semibold' : '',
+                    ],
+                    [
+                        'type'  => 'link',
+                        'title' => ($sortBy === 'created_desc' ? '✓ ' : '') . lang('Home.sort_options.created_desc'),
+                        'uri'   => route_to('home') . '?sort=created_desc',
+                        'class' => $sortBy === 'created_desc' ? 'font-semibold' : '',
+                    ],
+                    [
+                        'type'  => 'link',
+                        'title' => ($sortBy === 'created_asc' ? '✓ ' : '') . lang('Home.sort_options.created_asc'),
+                        'uri'   => route_to('home') . '?sort=created_asc',
+                        'class' => $sortBy === 'created_asc' ? 'font-semibold' : '',
+                    ],
+                ])) ?>" />
         </div>
         <div class="grid gap-4 mt-4 grid-cols-cards">
             <?php if ($podcasts): ?>
@@ -82,8 +82,8 @@
                                 <?php if ($podcast->is_premium): ?>
                                     <div class="absolute top-0 left-0 z-10 inline-flex items-center mt-2 gap-x-2">
                                         <?= icon('exchange-dollar-fill', [
-                                            'class' => 'w-8 pl-2 text-2xl rounded-r-full rounded-tl-lg text-accent-contrast bg-accent-base',
-                                        ]) ?>
+                                                'class' => 'w-8 pl-2 text-2xl rounded-r-full rounded-tl-lg text-accent-contrast bg-accent-base',
+                                            ]) ?>
                                         <?= explicit_badge($podcast->parental_advisory === 'explicit', 'rounded bg-black/75') ?>
                                     </div>
                                 <?php else: ?>
