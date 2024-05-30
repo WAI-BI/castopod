@@ -43,10 +43,7 @@
     <header class="py-8 border-b border-subtle bg-elevated">
         <div class="container flex flex-col items-start px-2 py-4 mx-auto">
             <a href="<?= route_to('home') ?>"
-            class="inline-flex items-center mb-2 text-sm focus:ring-accent"><?= icon(
-                'arrow-left-line',
-                'mr-2',
-            ) . lang('Page.back_to_home') ?></a>
+            class="inline-flex items-center mb-2 text-sm focus:ring-accent"><?= lang('Page.back_to_home') ?></a>
             <Heading tagName="h1" size="large"><?= lang('Page.map.title') ?></Heading>
         </div>
     </header>
