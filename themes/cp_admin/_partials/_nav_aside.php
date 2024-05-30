@@ -14,11 +14,5 @@ $isEpisodeArea = isset($podcast) && isset($episode);
         <?= $this->include('_sidebar') ?>
     <?php endif; ?>
     <footer class="px-2 py-2 mx-auto text-xs text-right">
-        <?= lang('Common.powered_by', [
-            'castopod' => '<a class="inline-flex font-semibold hover:underline focus:ring-accent" href="https://castopod.org/" target="_blank" rel="noreferrer noopener">Castopod' . icon('social:castopod', [
-                'class' => 'ml-1 text-lg',
-            ]) . '</a> ' .
-                CP_VERSION,
-        ], null, false) ?>
     </footer>
 </aside>

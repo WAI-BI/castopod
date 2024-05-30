@@ -40,10 +40,7 @@
         <h1 class="container flex items-center justify-between px-2 py-4 mx-auto">
             <a href="<?= route_to(
                 'home',
-            ) ?>" class="inline-flex items-baseline text-3xl font-semibold font-display"><?= service('settings')
-            ->get('App.siteName') === 'Castopod' ? 'castopod' .
-    svg('castopod-logo-base', 'h-6 ml-2') : esc(service('settings')
-            ->get('App.siteName')) ?></a>
+            ) ?>" class="inline-flex items-baseline text-3xl font-semibold font-display">Home</a>
         </h1>
     </header>
     <main class="container flex-1 px-4 py-10 mx-auto">
@@ -108,10 +105,5 @@
     </main>
     <footer class="container flex justify-between px-2 py-4 mx-auto text-sm text-right border-t border-subtle">
         <?= render_page_links() ?>
-        <small><?= lang('Common.powered_by', [
-            'castopod' => '<a class="inline-flex font-semibold hover:underline focus:ring-accent" href="https://castopod.org/" target="_blank" rel="noreferrer noopener">Castopod' . icon('social:castopod', [
-                'class' => 'ml-1 text-lg',
-            ]) . '</a>',
-        ], null, false) ?></small>
     </footer>
 </body>

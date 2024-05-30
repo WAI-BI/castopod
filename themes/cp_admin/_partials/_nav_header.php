@@ -12,7 +12,7 @@ $userPodcasts = get_podcasts_user_can_interact_with(auth()->user()); ?>
         ) ?>" class="inline-flex items-center h-full px-2 border-r border-navigation focus:ring-inset focus:ring-accent">
             <?= (isset($podcast) ? icon('arrow-left-line', [
                         'class' => 'mr-2',
-                    ]) : '') . svg('castopod-logo-base', 'h-6') ?>
+                    ]) : '')?>
         </a>
         <a href="<?= route_to(
             'home',

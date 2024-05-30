@@ -5,7 +5,7 @@ $userPodcasts = get_podcasts_user_can_interact_with(auth()->user()); ?>
 <div class="sticky top-0 left-0 z-50 flex items-center justify-between w-full h-10 text-white border-b bg-navigation border-navigation">
         <div class="inline-flex items-center h-full">
             <a href="<?= route_to('home') ?>" class="inline-flex items-center h-full px-2 border-r border-navigation focus:ring-inset focus:ring-accent">
-                    <?= svg('castopod-logo-base', 'h-6') ?>
+                   Home
             </a>
             <a href="<?= route_to('admin') ?>" class="inline-flex items-center h-full px-2 text-sm font-semibold sm:px-6 hover:underline focus:ring-inset focus:ring-accent" title="<?= lang('Navigation.go_to_admin') ?>">
                 <span class="hidden sm:block"><?= lang('Navigation.go_to_admin') ?></span>
