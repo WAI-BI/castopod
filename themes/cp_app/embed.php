@@ -62,6 +62,13 @@
                 </vm-controls>
             </vm-ui>
         </vm-player>
+        <script>
+            const { playing } = player.getStore();
+            playing.subscribe(isPlaying => {
+            if (!isPlaying) return;
+            console.log('playing');
+            });
+        </script>
         <?php endif; ?>
     </div>
 </body>
