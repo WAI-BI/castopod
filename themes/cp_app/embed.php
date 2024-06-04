@@ -93,7 +93,7 @@
                         const isFinished = player.getAttribute('data-finished') === '<?=$episode->id?>';
                         if (isFinished == <?=$episode->id?>) {
                             console.log('Playback finished in iframe for podcast episode :<?=$episode->id?>.');
-                            window.parent.postMessage('playbackFinished', '<?=$episode->id?>');
+                            window.parent.postMessage('playbackFinished_<?=$episode->id?>', '*');
                         }
                     }
                 });
