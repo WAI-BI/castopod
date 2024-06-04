@@ -62,13 +62,49 @@
                 </vm-controls>
             </vm-ui>
         </vm-player>
+
         <script>
-            const { playing } = player.getStore();
-            playing.subscribe(isPlaying => {
-            if (!isPlaying) return;
-            console.log('playing');
+            const player = document.querySelector('vm-player');
+            console.info(player);
+            // Listening to an event.
+            player.addEventListener('vmCurrentTimeChange', event => {
+                    alreadylissen = localStorage.getItem("al<?=$episode->id?>");
+
+                    if (event.detail <= alreadylissen) {
+                            const currentTime = alreadylissen;
+                            player.currentTime = alreadylissen;
+                            console.info("currentTime", currentTime);
+                    } else {
+                            const currentTime = event.detail;
+                            localStorage.setItem("al<?=$episode->id?>", currentTime);
+                            console.info("currentTime", currentTime);
+                    }
             });
+
+            player.addEventListener('vmPlaybackEnded', () => {
+                player.setAttribute('data-finished', '<?=$episode->id?>');
+                console.info("Podcast terminato")
+            });
+
+            // Osserva le modifiche agli attributi del player
+            const observer = new MutationObserver((mutations) => {
+                mutations.forEach((mutation) => {
+                    if (mutation.type === 'attributes' && mutation.attributeName === 'data-finished') {
+                        const isFinished = player.getAttribute('data-finished') === '<?=$episode->id?>';
+                        if (isFinished == <?=$episode->id?>) {
+                            console.log('Playback finished in iframe for podcast episode :<?=$episode->id?>.');
+                            window.parent.postMessage('playbackFinished', '<?=$episode->id?>');
+                        }
+                    }
+                });
+            });
+
+            observer.observe(player, {
+                attributes: true // Osserva solo le modifiche agli attributi
+            });
+
         </script>
+
         <?php endif; ?>
     </div>
 </body>
