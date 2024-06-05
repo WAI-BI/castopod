@@ -83,6 +83,8 @@
 
             player.addEventListener('vmPlaybackEnded', () => {
                 player.setAttribute('data-finished', '<?=$episode->id?>');
+                //svuoto la local storage cosi volendo possono riniziare da capo
+                localStorage.setItem("al<?=$episode->id?>", 0);
                 console.info("Podcast terminato")
             });
 
