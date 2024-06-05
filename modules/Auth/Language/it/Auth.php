@@ -88,6 +88,6 @@ return [
     'set_password' => 'Imposta la tua password',
 
     // Email di benvenuto
-    'welcomeSubject' => 'Sei stato invitato a {siteName}',
+    'welcomeSubject' => 'Sei stato invitato su {siteName}',
     'emailWelcomeMailBody' => 'È stato creato un account per te su {domain}, clicca sul link di accesso qui sotto per impostare la tua password. Il link è valido per {numberOfHours} ore dopo l\'invio di questa email.',
 ];

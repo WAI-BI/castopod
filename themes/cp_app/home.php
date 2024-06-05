@@ -44,7 +44,7 @@
         </h1>
     </header>
     <main class="container flex-1 px-4 py-10 mx-auto">
-        <div class="flex flex-wrap items-center justify-between py-2 border-b border-subtle gap-x-4">
+        <!-- <div class="flex flex-wrap items-center justify-between py-2 border-b border-subtle gap-x-4">
             <Heading tagName="h2" class="inline-block"><?= lang('Home.all_podcasts') ?> (<?= count(
                 $podcasts,
             ) ?>)</Heading>
@@ -101,9 +101,9 @@
             <?php else: ?>
                 <p class="italic"><?= lang('Home.no_podcast') ?></p>
             <?php endif; ?>
-        </div>
+        </div> -->
     </main>
     <footer class="container flex justify-between px-2 py-4 mx-auto text-sm text-right border-t border-subtle">
-        <?= render_page_links() ?>
+        <!-- <?= render_page_links() ?> -->
     </footer>
 </body>
